@@ -1,15 +1,11 @@
 import mongoose from 'mongoose';
+import 'dotenv/config'
 
 const dbConnection = async() => {
 
     try {
 
-        await mongoose.connect(process.env.MONGODB_CNN, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            // useCreateIndex: true,
-            // useFindAndModify: false
-        });
+        await mongoose.connect(process.env.MONGODB_CNN);
 
         console.log('DB online');
         

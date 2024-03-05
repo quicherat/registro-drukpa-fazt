@@ -1,6 +1,7 @@
 import app from './app.js';
 import {dbConnection} from './db.js';
+import 'dotenv/config'
 
-// dbConnection();
-app.listen(4000)
-console.log('server on port', 4000);
+dbConnection();
+app.listen(process.env.PORT)
+console.log(`El servidor en la puerta ${process.env.PORT}`);
