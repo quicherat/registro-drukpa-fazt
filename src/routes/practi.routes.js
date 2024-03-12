@@ -1,9 +1,8 @@
 import {Router} from 'express'
 import {authRequired} from '../middlewares/validateToken.js'
-import { getTasks } from '../controllers/task.controller.js'
 
 const router = Router()
 
-router.get('/tasks', authRequired, getTasks)
+router.get('/practi', authRequired, (req,res) => res.send('practicantes'))
 
 export default router
